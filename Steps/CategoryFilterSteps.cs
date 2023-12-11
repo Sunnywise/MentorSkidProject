@@ -30,8 +30,7 @@ namespace MentorSkidSoftwareProject.Features
         {
             _categoryFilterPage.SelectParentCategory();
         }
-        
-       
+               
         [When(@"i click on the search now button")]
         public void WhenIClickOnTheSearchNowButton()
         {
@@ -44,11 +43,47 @@ namespace MentorSkidSoftwareProject.Features
             _categoryFilterPage.RandomCourseSelection();
         }
 
-
         [Then(@"I must see all the Subcategories listed on the Side Navigation Panel")]
         public void ThenIMustSeeAllTheSubcategoriesListedOnTheSideNavigationPanel()
         {
             Assert.IsTrue(_categoryFilterPage.AssertUrlPage());
         }
+
+        [Then(@"a search result message is displayed as ""(.*)""")]
+        public void ThenASearchResultMessageIsDisplayedAs(string p0)
+        {
+            _categoryFilterPage.AssertUnavailableMessage().Contains("Oops! No data match with your keyword");
+        }
+
+        [When(@"I click on the select category dropdown list, under Subject & Level on the side navigation panel")]
+        public void WhenIClickOnTheSelectCategoryDropdownListUnderSubjectLevelOnTheSideNavigationPanel()
+        {
+            _categoryFilterPage.SearchCategoriesBySideNav();
+        }
+
+        [When(@"I click on a category of my choice")]
+        public void WhenIClickOnACategoryOfMyChoice()
+        {
+            _categoryFilterPage.SearchCategoriesBySideNav();
+        }
+
+        [When(@"I click on a subcategory checkbox of my choice")]
+        public void WhenIClickOnASubcategoryCheckboxOfMyChoice()
+        {
+            _categoryFilterPage.SubCategorySelection();
+        }
+
+        [When(@"I click the Apply filters button")]
+        public void WhenIClickTheApplyFiltersButton()
+        {
+           _categoryFilterPage.ClickApplyFilterBtn();
+        }
+
+        [Then(@"I must see relevant Mentors based on my search")]
+        public void ThenIMustSeeRelevantMentorsBasedOnMySearch()
+        {
+          _categoryFilterPage.SearchResultDisplay().Contains("search result found");
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+
     }
 }

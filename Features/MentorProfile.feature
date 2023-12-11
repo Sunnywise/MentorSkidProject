@@ -5,7 +5,7 @@
 
 Background: 
      Given that a user navigate on https://mentorskid.com/login/
-	When user enters username or email address "QATester1@testing.com"
+	When user enters username or email address "QATester@fake-box.com"
 	And user enters login password "password1234"
 	And user clicks on submit button
 	Then the user registered page is displayed
@@ -17,7 +17,7 @@ Scenario: To verify Mentor's profile page
 	And user enters his tagline "Demo12345"
 	And user selects his country from the dropdown
 	And user enters his address "7 Tester Arena"
-	And user enters his postcode " WC2N 5DU"
+	And user enters his postcode "WC2N 5DU"
 	And user select his preferred language or languages
 	And user select the teaching location as online
 	And user writes out a brief introduction about himself "I am an experienced instructor"

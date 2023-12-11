@@ -10,7 +10,7 @@ namespace MentorSkidSoftwareProject.Steps
 {
     [Binding]
     public class UploadingMentorProfilePhotoSteps
-    {/*
+    {
         public IWebDriver driver;
         UploadingMentorProfilePhotoPage _uploadingMentorProfilePhotoPage = new UploadingMentorProfilePhotoPage();
 
@@ -43,7 +43,7 @@ namespace MentorSkidSoftwareProject.Steps
         {
             _uploadingMentorProfilePhotoPage.MentorImageUploadSuccessfull().Should().BeTrue();
         }
-    */}
+    }
 }
 
 

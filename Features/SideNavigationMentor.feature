@@ -5,7 +5,7 @@
 
 Background: 
     Given that a user navigate on https://mentorskid.com/login/
-	When user enters username or email address "QATester1@testing.com"
+	When user enters username or email address "QATester@fake-box.com"
 	And user enters login password "password1234"
 	And user clicks on submit button
 	Then the user registered page is displayed

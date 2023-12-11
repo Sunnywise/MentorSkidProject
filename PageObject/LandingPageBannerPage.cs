@@ -29,20 +29,20 @@ namespace MentorSkidSoftwareProject.PageObject
 
         public void MentorClickJoinAsMentor()
         {
-            Thread.Sleep(3000);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
             driver.FindElement(joinAsMentor).Click();
         }
 
         public void MenteeRegistrationPage()
         {
-           Thread.Sleep(3000);
-           driver.Navigate().Back();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+            driver.Navigate().Back();
            driver.Url = "https://mentorskid.com";
         }
 
         public bool MentorRegistrationPage()
         {
-            Thread.Sleep(4000);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(4);
             return driver.Url.Contains("https://mentorskid.com/signup/");          
         }
 

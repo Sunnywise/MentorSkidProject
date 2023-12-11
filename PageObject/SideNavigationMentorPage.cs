@@ -22,8 +22,6 @@ namespace MentorSkidSoftwareProject.PageObject
         private By viewNavigation = By.CssSelector("div[class='tu-uploadinfo'] h6");
         private By collapseSubMenu = By.XPath("//a[normalize-space()='Profile settings']");
         private By expandSubMenu = By.XPath("//i[@class='icon icon-settings']");
-
-
         public void UserRegisteredEmail(string p0)
         {
             regEmail.SendKeys(p0);
@@ -33,7 +31,6 @@ namespace MentorSkidSoftwareProject.PageObject
         {
             regPassword.SendKeys(p0);
         }
-
         public void UserSubmitBtn()
         {
             submitBtn.Click();
@@ -44,8 +41,6 @@ namespace MentorSkidSoftwareProject.PageObject
             Thread.Sleep(3000);
             return profilePage.Displayed;
         }
-
-
         public void ProfileSettingsExpand()
         {
             Thread.Sleep(5000);
@@ -57,7 +52,6 @@ namespace MentorSkidSoftwareProject.PageObject
             Thread.Sleep(5000);
             driver.FindElement(collapseSubMenu).Click();
         }
-
         public string ViewingSideNavigation()
         {
             Thread.Sleep(7000);

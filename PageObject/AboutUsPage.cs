@@ -36,7 +36,7 @@ namespace MentorSkidSoftwareProject.PageObject
 
         public bool ScrollToSecondSection()
         {
-            Thread.Sleep(5000);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
             js.ExecuteScript("window.scrollBy(0,670)");
             return driver.FindElement(imagePix).Displayed;
@@ -45,10 +45,10 @@ namespace MentorSkidSoftwareProject.PageObject
 
         public bool ScrollToThirdSection()
         {
-            Thread.Sleep(5000);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
             js.ExecuteScript("window.scrollBy(0,1000)");
-            Thread.Sleep(5000);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             return driver.Url.Contains("https://mentorskid.com/how-it-work/");
         }
 

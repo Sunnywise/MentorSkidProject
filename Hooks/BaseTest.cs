@@ -20,6 +20,7 @@ namespace MentorSkidSoftwareProject.Hooks
         [BeforeScenario]
         public void BeforeScenario()
         {
+           
             driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
@@ -28,9 +29,9 @@ namespace MentorSkidSoftwareProject.Hooks
         [AfterScenario]
         public void AfterScenario()
         {
-           Task.Delay(5000);
-           driver.Quit();
-            Kill("ChromeDriver");
+            Task.Delay(5000);
+           // driver.Quit();
+            //Kill("ChromeDriver");
         }
         public static void Kill(string processName)
         {

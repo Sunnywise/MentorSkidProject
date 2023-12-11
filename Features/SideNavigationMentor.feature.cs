@@ -82,7 +82,7 @@ namespace MentorSkidSoftwareProject.Features
     testRunner.Given("that a user navigate on https://mentorskid.com/login/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 8
- testRunner.When("user enters username or email address \"QATester1@testing.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("user enters username or email address \"QATester@fake-box.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 9
  testRunner.And("user enters login password \"password1234\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

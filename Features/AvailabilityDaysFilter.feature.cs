@@ -19,24 +19,26 @@ namespace MentorSkidSoftwareProject.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("UploadingMentorProfilePhoto", Description="   As a registered mentor user of mentorskid webpage\r\n   I want to upload my pict" +
-        "ure\r\n   So that my picture can be displayed on my profile", SourceFile="Features\\UploadingMentorProfilePhoto.feature", SourceLine=0)]
-    public partial class UploadingMentorProfilePhotoFeature
+    [TechTalk.SpecRun.FeatureAttribute("AvailabilityDaysFilter", Description="   As a registered mentee on www.mentorskid.com\r\n   I want to be able to search f" +
+        "or mentors\' availability based on the days of the week\r\n   So that I can see the" +
+        " relevant mentors based on the day(s) I selected", SourceFile="Features\\AvailabilityDaysFilter.feature", SourceLine=0)]
+    public partial class AvailabilityDaysFilterFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "UploadingMentorProfilePhoto.feature"
+#line 1 "AvailabilityDaysFilter.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "UploadingMentorProfilePhoto", "   As a registered mentor user of mentorskid webpage\r\n   I want to upload my pict" +
-                    "ure\r\n   So that my picture can be displayed on my profile", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "AvailabilityDaysFilter", "   As a registered mentee on www.mentorskid.com\r\n   I want to be able to search f" +
+                    "or mentors\' availability based on the days of the week\r\n   So that I can see the" +
+                    " relevant mentors based on the day(s) I selected", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -72,34 +74,15 @@ namespace MentorSkidSoftwareProject.Features
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
+        [TechTalk.SpecRun.ScenarioAttribute("Filtering\'mentor availabiliy days", new string[] {
+                "PBI12406"}, SourceLine=6)]
+        public virtual void FilteringmentorAvailabiliyDays()
         {
-#line 6
-#line hidden
-#line 7
-    testRunner.Given("that a user navigate on https://mentorskid.com/login/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 8
- testRunner.When("user enters username or email address \"QATester@fake-box.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 9
- testRunner.And("user enters login password \"password1234\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 10
- testRunner.And("user clicks on submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 11
- testRunner.Then("the user registered page is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Uploading of mentor\'s profile picture", SourceLine=11)]
-        public virtual void UploadingOfMentorsProfilePicture()
-        {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "PBI12406"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Uploading of mentor\'s profile picture", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 12
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filtering\'mentor availabiliy days", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -119,23 +102,24 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 6
-this.FeatureBackground();
+#line 8
+ testRunner.Given("that I am a registered mentee on mentorskid\'s webpage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 9
+    testRunner.When("I click on find a mentor from the main menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 10
+    testRunner.And("I scroll down to mentor availability on the Side Navigation Panel to view all the" +
+                        " days of the week", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 11
+    testRunner.And("I click the checkbox for my desired day(s) of the week", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 12
+    testRunner.And("I click on the Apply filters button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 13
-    testRunner.When("user clicks upload photo as a mentor", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 14
- testRunner.And("user selects the desire photo to upload as a Mentor", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 15
-    testRunner.And("user clicks and drag the slider to crop mentor picture if necessary", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 16
-    testRunner.And("user clicks on save button to save the photo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 17
-    testRunner.Then("mentor photo is successfully uploaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I must see all the mentors that are available, based on the days I selected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
