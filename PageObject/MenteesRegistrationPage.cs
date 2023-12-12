@@ -18,7 +18,6 @@ namespace MentorSkidSoftwareProject.PageObject
         private By starterMentee = By.CssSelector("a[class='tu-primbtn tu-primbtn-gradient'] span");
         private By firstName = By.XPath("//input[@name='registration[fname]']");
         private By lastName = By.XPath("//input[@placeholder='Last name']");
-        IWebElement emailAddy => driver.FindElement(By.XPath("//input[@name='registration[email]']"));
         private By passWord = By.CssSelector("#tu-passwordinput");
         private By showPassword = By.XPath("//i[@class='icon icon-eye-off']");
         private By instructorCheckbox = By.XPath("//label[@for='user_type_instructor']");
@@ -27,7 +26,7 @@ namespace MentorSkidSoftwareProject.PageObject
         private By joinUs = By.XPath("//span[normalize-space()='Join now']");
         private By errorText =By.Id("jconfirm-box");   
         private By loginWelcome = By.CssSelector("#user_profile_avatar");
-
+        IWebElement emailAddy => driver.FindElement(By.XPath("//input[@name='registration[email]']"));
 
         public void UserClickOnStartMentee()
         {
@@ -69,7 +68,7 @@ namespace MentorSkidSoftwareProject.PageObject
         }
         public bool RegisteredLoginPage()
         {
-            Thread.Sleep(3000);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
             return driver.FindElement(loginWelcome).Displayed;
         }
 

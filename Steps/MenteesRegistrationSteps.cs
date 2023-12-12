@@ -67,7 +67,6 @@ namespace MentorSkidSoftwareProject.Features
             _menteesRegistrationPage.UserEntersJoinNowButton();
         }
         
-
         [Then(@"the text ""(.*)"" is displayed as popups")]
         public void ThenTheTextIsDisplayedAsPopups(string Text)
         {

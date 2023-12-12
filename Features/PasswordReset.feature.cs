@@ -19,24 +19,24 @@ namespace MentorSkidSoftwareProject.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("UploadingMentorProfilePhoto", Description="   As a registered mentor user of mentorskid webpage\r\n   I want to upload my pict" +
-        "ure\r\n   So that my picture can be displayed on my profile", SourceFile="Features\\UploadingMentorProfilePhoto.feature", SourceLine=0)]
-    public partial class UploadingMentorProfilePhotoFeature
+    [TechTalk.SpecRun.FeatureAttribute("PasswordReset", Description="\tAs a registered user of www.mentorskid.com\r\n   I want to be able to reset my pas" +
+        "sword\r\n   So that I can regain access to my account, if I forget my password", SourceFile="Features\\PasswordReset.feature", SourceLine=0)]
+    public partial class PasswordResetFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "UploadingMentorProfilePhoto.feature"
+#line 1 "PasswordReset.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "UploadingMentorProfilePhoto", "   As a registered mentor user of mentorskid webpage\r\n   I want to upload my pict" +
-                    "ure\r\n   So that my picture can be displayed on my profile", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "PasswordReset", "\tAs a registered user of www.mentorskid.com\r\n   I want to be able to reset my pas" +
+                    "sword\r\n   So that I can regain access to my account, if I forget my password", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -72,34 +72,15 @@ namespace MentorSkidSoftwareProject.Features
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
+        [TechTalk.SpecRun.ScenarioAttribute("Resetting of password", new string[] {
+                "mytag"}, SourceLine=6)]
+        public virtual void ResettingOfPassword()
         {
-#line 6
-#line hidden
-#line 7
-    testRunner.Given("that a user navigate on https://mentorskid.com/login/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 8
- testRunner.When("user enters username or email address \"QATester@fake-box.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 9
- testRunner.And("user enters login password \"password1234\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 10
- testRunner.And("user clicks on submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 11
- testRunner.Then("the user registered page is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Uploading of mentor\'s profile picture", SourceLine=11)]
-        public virtual void UploadingOfMentorsProfilePicture()
-        {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "mytag"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Uploading of mentor\'s profile picture", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 12
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Resetting of password", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -119,23 +100,17 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 6
-this.FeatureBackground();
+#line 8
+ testRunner.Given("that I am on the password reset page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 13
-    testRunner.When("user clicks upload photo as a mentor", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 9
+ testRunner.When("I enter my email address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 14
- testRunner.And("user selects the desire photo to upload as a Mentor", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 10
+ testRunner.And("click the Reset password Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 15
-    testRunner.And("user clicks and drag the slider to crop mentor picture if necessary", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 16
-    testRunner.And("user clicks on save button to save the photo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 17
-    testRunner.Then("mentor photo is successfully uploaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 11
+ testRunner.And("I click on the password reset link in my email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

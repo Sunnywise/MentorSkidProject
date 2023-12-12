@@ -28,7 +28,6 @@ namespace MentorSkidSoftwareProject.PageObject
         private By errorMsg = By.ClassName("jconfirm-title");
         private By registeredPage = By.XPath("//*[@id='profile-avatar']");
 
-
         public void UserClickOnJoinMentor()
         {
             driver.FindElement(joinMentor).Click();
@@ -72,10 +71,9 @@ namespace MentorSkidSoftwareProject.PageObject
             Thread.Sleep(3000);
             return driver.FindElement(registeredPage).Displayed;
         }
-
         public string ErrorInvalidMessage()
         {
-            Thread.Sleep(3000);
+            Thread.Sleep(5000);
             return driver.FindElement(errorMsg).Text;
         }
 

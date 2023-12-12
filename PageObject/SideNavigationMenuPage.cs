@@ -18,7 +18,6 @@ namespace MentorSkidSoftwareProject.PageObject
         private By collapseSubMenu = By.XPath("//a[normalize-space()='Profile settings']");
         private By expandSubMenu = By.XPath("//i[@class='icon icon-settings']");
 
-
         public void ProfileSettingsCollapse()
         {
             Thread.Sleep(5000);

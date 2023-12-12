@@ -28,12 +28,11 @@ namespace MentorSkidSoftwareProject.PageObject
         private By onlineLocation = By.CssSelector("label[for='online']");
         private By inFrameText = By.XPath("//button[@id='profile_introduction-html']");
         private By saveBtn = By.XPath("//a[normalize-space()='Save & update']");
-
-
+        
 
         public string ProfilePageDisplay()
         {
-            Thread.Sleep(7000);
+            Thread.Sleep(4000);
             return driver.FindElement(profilePage).Text;
         }
 
@@ -52,25 +51,28 @@ namespace MentorSkidSoftwareProject.PageObject
 
         public void AddYourTagline(String p0)
         {
+            driver.FindElement(tagLine).Clear();
             driver.FindElement(tagLine).SendKeys(p0);
         }
 
         public void MentorCountry()
         {
-            Thread.Sleep(3000);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
             SelectElement ctry = new SelectElement(driver.FindElement(choiceCountry));
             ctry.SelectByValue("gb");
         }
 
         public void MentorCityName(string p0)
         {
-            Thread.Sleep(2000);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
+            driver.FindElement(cityName).Clear();
             driver.FindElement(cityName).SendKeys(p0);
         }
 
         public void MentorAddressName(string p0)
         {
-            Thread.Sleep(2000);
+            driver.FindElement(addressName).Clear();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
             driver.FindElement(addressName).SendKeys(p0);
         }
 
@@ -78,37 +80,43 @@ namespace MentorSkidSoftwareProject.PageObject
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
             js.ExecuteScript("window.scrollBy(0,650)");
-            Thread.Sleep(3000);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+            driver.FindElement(postcodeMentor).Clear();
             driver.FindElement(postcodeMentor).SendKeys(p0);
         }
 
         public void MentorLangaugeSelector()
         {
-            Thread.Sleep(4000);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(4);
             SelectElement languages = new SelectElement(driver.FindElement(selectLanguages));
             languages.SelectByValue("english");  
         }
 
         public void MentorTeachingLocation()
         {
-            Thread.Sleep(3000);
+            IJavaScriptExecutor JS = (IJavaScriptExecutor)driver;
+            JS.ExecuteScript("window.scrollTo(0, 1000)");
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(4);
             driver.FindElement(onlineLocation).Click();
         }
 
         public void MentorBriefIntroduction(string p0)
         {
-            Thread.Sleep(5000);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             driver.FindElement(inFrameText).Click();
-            Thread.Sleep(3000);
+            driver.FindElement(By.XPath("//textarea[@id='profile_introduction']")).Clear();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
             driver.FindElement(By.XPath("//textarea[@id='profile_introduction']")).SendKeys(p0);
         }
 
         public void SaveAndUpdateMentorProfile()
         {
-            Thread.Sleep(3000);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+            driver.SwitchTo().DefaultContent();
+            driver.SwitchTo().ParentFrame();
             IJavaScriptExecutor JS = (IJavaScriptExecutor)driver;
-            JS.ExecuteScript("window.scrollTo(0, 1200)");
-            Thread.Sleep(2000);
+            JS.ExecuteScript("window.scrollTo(0, 2500)");
+            Thread.Sleep(4000);
             driver.FindElement(saveBtn).Click();
         }
     }
